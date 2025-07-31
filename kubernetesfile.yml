@@ -18,7 +18,7 @@ spec:
         - name: springboot-container
           image: himanshutha/myimage:latest
           ports:
-            - containerPort: 8081
+            - containerPort: 8082
 ---
 apiVersion: v1
 kind: Service
@@ -31,5 +31,5 @@ spec:
   ports:
     - protocol: TCP
       port: 80         # external port
-      targetPort: 8081 # internal container port
+      targetPort: 8082 # internal container port
       nodePort: 30092  # exposed on EC2 node
